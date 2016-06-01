@@ -1,0 +1,109 @@
+1: Name attributes of HTTP protocol makes it difficult to use for real time systems.
+One of the biggest drawbacks is that the HTTP is designed so everytime it needs something from the server, it has to make
+request (stateless). Open a port – get info from server – close port. Everytime you have to open a port it takes time and
+resources not a very good flaw in real-time applications.
+
+**********************************
+
+2: Explain polling and long-polling strategies, their pros and cons.
+
+Polling: is the request from a client and the wait from the server. In a chat app the polling could be when a client
+requesting the server every 3-5 seconds to check if a new message has arrived. If this is true, the server will respond
+and if not the respond is nothing. (A bit like a ping).
+Long Polling: In a long polling it starts with the request from the user to see if there is any updates on the server
+but instead of responding right away, it waits til the server gets a new message. Then it responds with the message. The
+user will then send a new long polling and awaits the next message. So instead of pinging all the time, it pings one for
+each message it recieves.
+
+**********************************
+
+3: What is HTTP streaming, SSE (Server sent events)?
+
+Server-sent events is a standard which describe how servers can initiate data transmissions towards clients when a client
+connection has been established. They are normally used for sending message updates og datastreams to a browser client. It
+is designed to enhance native cross-browser straiming through a JavaScript API called EventSource. Through this API a
+client can request a particular URL in order to get a event stream (ie connectivity stream).
+
+When using SSE’s an communicating server/app, the server can push data to the app without making a request. Updates and
+streams can be shipped to the client realtime.  SSEs open a single unidirectional channel between server and client (ie a
+Tunnel).
+message. So instead of pinging all the time, it pings one for each message it recieves.
+
+**********************************
+
+4: What is WebSocket protocol, how is it different from HTTP communication, what advantages it has over HTTP?
+
+WebSockets represent a client/server web technology. A TCP socket is long-held connection between the client and the server.
+The Protocol allows bi-directional, full duplex, messages to be instantly distributed with little overhead resulting in a
+very low latency connection.
+
+**********************************
+
+
+5: Explain what the WebSocket Protocol brings to the Web-world?
+
+WebSocket provides full-duplex communication unlike HTTP. This means that webSockets allows
+communication in both directions, and (unlike half-duplex), allows this to happen simultaneously.
+This is ideal for chat programs.
+
+**********************************
+
+6: Explain and demonstrate the process of WebSocket communication - From connecting client to server, through sending
+messages, to closing connection.
+
+See code for example on how to use it.
+
+**********************************
+
+7: What's the advantage of using libraries like Socket.IO, Sock.JS, WS, over pure WebSocket libraries in the backend and
+standard APIs on frontend? Which problems do they solve?
+
+They simplify most of the work and can give the programmer more features and thus could solve som problems faster (and
+probably create new ones).
+
+**********************************
+
+8: What is Backend as a Service, Database as a Service, why would you consider using Firebase in your projects?
+
+Backend as a Service, or BaaS is best described by a tech analyst who refers to it as “turn-on infrastructure” for mobile
+and web apps. Basically, it’s a cloud computing category that’s comprised of companies that make it easier for developers
+to setup, use and operate a cloud backend for their mobile, tablet and web apps.
+
+Database as a Service (DBaaS) is a cloud-based approach to the storage and management of structured data. DBaaS delivers
+database functionality similar to what is found in relational database management systems (RDBMS) such as SQL Server,
+MySQL and Oracle. Being cloud-based, on the other hand, DBaaS provides a flexible, scalable, on-demand platform that's
+oriented toward self-service and easy management, particularly in terms of provisioning a business' own environment.
+DBaaS products typically provide enough monitoring capabilities to track performance and usage and to alert users to
+potential issues. The products can also generate at least some degree of data analytics.
+
+Firebase isn’t just any ordinary database, it is a real-time, scalable backend, which provide the tools you need to quickly
+build rich, collaborative applications that can serve millions of users, only developing client code. Firebase even provides
+the possibility for authentication.
+
+**********************************
+
+9: Explain the pros & cons of using a Backend as a Service Provider like Firebase.
+
+Pros:
++ Its scalable
++ Its flexible
++ its easy to use
++ Cross Platform API
++ Built in support for facebook/google authentication
+
+Cons:
+- You do not have complete control over it
+- It costs money
+
+**********************************
+
+10: Explain and demonstrate “three-way data binding” using Firebase and Angular
+
+Did not use Firebase.
+
+**********************************
+
+11: Explain and demonstrate the difference between the simple chat system in your own WebSocket + Node.js backend vs. Firebase.
+
+Did not use Firebase.
+
